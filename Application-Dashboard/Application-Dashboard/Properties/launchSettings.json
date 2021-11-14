@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Application-Dashboard": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "test": "test"
+      }
+    }
+  }
+}
