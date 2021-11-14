@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-namespace Application_Dashboard
+﻿namespace Application_Dashboard
 {
     class Program
     {
