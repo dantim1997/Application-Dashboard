@@ -9,18 +9,15 @@ namespace Application_Dashboard
 {
     public static class ReadExePaths
     {
-        public static List<Temp> ReadAllPaths()
+        public static List<KeyValuePair> ReadAllPaths()
         {
-            List<string> apps = new();
-
+            // would like to have an other way to store the paths-- maybe in the future he looks for all the applications?
             var file = System.IO.File.ReadAllText(@"Path.json");
-            var output = JsonConvert.DeserializeObject<List<Temp>>(file);
-            var dictionary = output.ToDictionary(x => x.Key, y => y.Value);
+            var output = JsonConvert.DeserializeObject<List<KeyValuePair>>(file);
             return output;
         }
         
-
-        public class Temp
+        public class KeyValuePair
         {
             public string Key { get; set; }
             public string Value { get; set; }

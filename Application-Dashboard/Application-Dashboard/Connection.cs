@@ -12,44 +12,34 @@ namespace Application_Dashboard
     {
         public Connection()
         {
+            // TODO change to pc ip adress in network --- port is not that important?
             IPEndPoint ep = new IPEndPoint(IPAddress.Loopback, 1234); // Address  
             TcpListener listener = new TcpListener(ep); // Instantiate the object  
-            listener.Start(); // Start listening...  
+            listener.Start(); // Start listening to the client
+
             while (true)
             {
                 const int bytesize = 1024 * 1024;
-
-                string message = null;
                 byte[] buffer = new byte[bytesize];
 
                 var sender = listener.AcceptTcpClient();
                 sender.GetStream().Read(buffer, 0, bytesize);
-
-                // Read the message and perform different actions  
-                message = cleanMessage(buffer);
-
+                string message = cleanMessage(buffer);
 
                 foreach (string line in message.Split("\r\n"))
                 {
-                    // do something
+                    // StartRun is the command where the application name is given.
                     if (line.Contains("StartRun"))
                     {
                         var runProgram = line.Split(':');
-                        RunApplication(runProgram[1]);
+                        StartApplication.RunApplication(runProgram[1]);
                     }
                 }
                 sender.Close();
             }
         }
 
-        private void RunApplication(string app)
-        {
-            Console.WriteLine("Hello World!");
-            var apps = ReadExePaths.ReadAllPaths();
-            var usePath = apps.Where(a => a.Key == app).Select(b => b.Value).FirstOrDefault();
-            System.Diagnostics.Process.Start(usePath);
-        }
-
+        //from byte array to readable string
         private static string cleanMessage(byte[] bytes)
         {
             string message = System.Text.Encoding.ASCII.GetString(bytes);

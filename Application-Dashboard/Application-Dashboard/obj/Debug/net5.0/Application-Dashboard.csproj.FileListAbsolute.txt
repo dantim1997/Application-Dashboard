@@ -13,7 +13,6 @@ C:\Users\TG-Kamer\Desktop\projects\Application-Dashboard\Application-Dashboard\A
 C:\Users\TG-Kamer\Desktop\projects\Application-Dashboard\Application-Dashboard\Application-Dashboard\obj\Debug\net5.0\ref\Application-Dashboard.dll
 C:\Users\TG-Kamer\Desktop\projects\Application-Dashboard\Application-Dashboard\Application-Dashboard\obj\Debug\net5.0\Application-Dashboard.pdb
 C:\Users\TG-Kamer\Desktop\projects\Application-Dashboard\Application-Dashboard\Application-Dashboard\obj\Debug\net5.0\Application-Dashboard.genruntimeconfig.cache
-C:\Users\TG-Kamer\Desktop\projects\Application-Dashboard\Application-Dashboard\Application-Dashboard\bin\Debug\net5.0\Paths.txt
 C:\Users\TG-Kamer\Desktop\projects\Application-Dashboard\Application-Dashboard\Application-Dashboard\obj\Debug\net5.0\Application-Dashboard.csproj.AssemblyReference.cache
 C:\Users\TG-Kamer\Desktop\projects\Application-Dashboard\Application-Dashboard\Application-Dashboard\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\TG-Kamer\Desktop\projects\Application-Dashboard\Application-Dashboard\Application-Dashboard\bin\Debug\net5.0\Path.json
